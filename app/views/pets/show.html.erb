@@ -2,3 +2,11 @@
 
 <p><%= @pet.breed %></p>
 <p><%= @pet.image %></p>
+
+<ul>
+  <li><%= link_to "Edit", edit_pet_path(@pet) %></li>
+  <li><%= link_to "Destroy", pet_path(@pet), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+</ul>
